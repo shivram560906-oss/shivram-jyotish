@@ -717,7 +717,7 @@ async function openPost(id) {
 // ═══════════════════════════════════════════
 //  MARKDOWN → HTML (with media)
 // ═══════════════════════════════════════════
-function mdToHTML(md) {
+  function mdToHTML(md) {
   if (!md) return '';
   let h = md.replace(/\r\n/g,'\n')
     .replace(/^## (.+)$/gm,'<h3>$1</h3>')
@@ -726,12 +726,15 @@ function mdToHTML(md) {
     .replace(/^> (.+)$/gm,'<blockquote>$1</blockquote>')
     .replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:20px 0">')
     .replace(/^- (.+)$/gm,'<li>$1</li>')
-    // Images: ![alt](url)
-    .replace(/!\[([^\]]*)\]\((https?:\/\/[^\)]+)\)/g,'<img src="$2" alt="$1" style="max-width:100%;border-radius:10px;margin:14px 0;box-shadow:0 4px 18px rgba(0,0,0,.1)">')
-    // Videos: [video](url) — YouTube / direct
-    .replace(/\[video\]\((https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([^\)&]+)[^\)]*)\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$2" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
-    .replace(/\[video\]\((https?:\/\/(?:www\.)?youtu\.be\/([^\)]+)\))/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$2" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
+    // Images: ![alt](url) — handles http URLs and data URIs
+    .replace(/!\[([^\]]*)\]\(((?:https?:\/\/|data:image\/)[^\)]+)\)/g,'<img src="$2" alt="$1" style="max-width:100%;border-radius:10px;margin:14px 0;box-shadow:0 4px 18px rgba(0,0,0,.1)">')
+    // YouTube full URL
+    .replace(/\[video\]\(https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([^&\)]+)[^\)]*\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
+    // YouTube short URL
+    .replace(/\[video\]\(https?:\/\/(?:www\.)?youtu\.be\/([^\)]+)\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
+    // Direct video files
     .replace(/\[video\]\((https?:\/\/[^\)]+\.(?:mp4|mov|webm|ogg)[^\)]*)\)/g,'<video controls style="max-width:100%;border-radius:10px;margin:14px 0"><source src="$1">भिडियो लोड भएन।</video>')
+    // Other video URLs (iframes)
     .replace(/\[video\]\((https?:\/\/[^\)]+)\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="$1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>');
 
   h = h.replace(/(<li>.*<\/li>\n?)+/g, m=>`<ul>${m}</ul>`);
