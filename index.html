@@ -3,26 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ज्योतिषाचार्य शिवराम पराजुली - ज्योतिष ब्लग, कुण्डली ज्ञान, वैदिक ज्योतिष">
+<meta name="description" content="शिवराम पराजुली - ज्योतिष ब्लग, कुण्डली ज्ञान, वैदिक ज्योतिष">
 <title>शिवराम पराजुली | ज्योतिष ब्लग</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- ════════════════════════════════════════
-  🔧 SUPABASE CONFIG — आफ्नो URL र KEY राख्नुहोस्
-  Setup guide: README.md हेर्नुहोस्
-════════════════════════════════════════ -->
 <script>
-  const SUPABASE_URL = 'https://tptarwodjrsthklqlfgq.supabase.co';       // e.g. https://abcxyz.supabase.co
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwdGFyd29kanJzdGhrbHFsZmdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4MTYzNTgsImV4cCI6MjA5MzM5MjM1OH0.Dsss8fUFuXaw0dtb1KTEpS45K4RLLww-Oj5IZDhQqNM'; // Settings > API > anon/public key
-  const ADMIN_PASSWORD = 'shivram2025';            // आफ्नो पासवर्ड परिवर्तन गर्नुहोस्!
+  const SUPABASE_URL = 'https://tptarwodjrsthklqlfgq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwdGFyd29kanJzdGhrbHFsZmdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4MTYzNTgsImV4cCI6MjA5MzM5MjM1OH0.Dsss8fUFuXaw0dtb1KTEpS45K4RLLww-Oj5IZDhQqNM';
+  const ADMIN_PASSWORD = 'shivram2025';
 </script>
 
 <style>
 :root {
   --saffron:#E8650A;--gold:#C8900A;--gold-light:#F0B429;--red:#8B1A1A;
   --cream:#FFF8EE;--warm:#FFFDF5;--dark:#1E0F00;--dark2:#3A1800;
-  --mid:#5C3D1E;--light:#8B6E50;--border:rgba(200,144,10,0.25);
+  --mid:#5C3D1E;--light:#8B6E50;--border:rgba(200,144,10,0.22);
   --orange-bg:#FFF3E0;--serif:'Noto Serif Devanagari',serif;--sans:'Noto Sans Devanagari',sans-serif;
+  --radius:14px;--shadow:0 2px 20px rgba(0,0,0,.06);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -33,184 +30,212 @@ h1,h2,h3,h4{font-family:var(--serif)}
 #loader{position:fixed;inset:0;background:var(--dark);display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:14px;transition:opacity .5s}
 #loader.hide{opacity:0;pointer-events:none}
 .loader-om{font-size:56px;animation:spin 3s linear infinite}
-.loader-text{color:var(--gold-light);font-family:var(--serif);font-size:16px}
+.loader-text{color:var(--gold-light);font-family:var(--serif);font-size:16px;letter-spacing:.5px}
 @keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
 
-/* SETUP BANNER */
-.setup-banner{display:none;background:linear-gradient(135deg,#1a3a1a,#0d2a0d);border-bottom:2px solid #4CAF50;padding:10px 20px;text-align:center;font-size:13px;color:#90EE90;position:fixed;top:58px;width:100%;z-index:99}
-.setup-banner.show{display:block}
-
 /* NAVBAR */
-.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(30,15,0,.97);backdrop-filter:blur(12px);border-bottom:2px solid rgba(200,144,10,.4)}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:58px}
-.logo{display:flex;align-items:center;gap:10px;cursor:pointer}
-.logo-icon{font-size:22px}
-.logo-text{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--gold-light);line-height:1.2}
-.logo-sub{font-size:10px;color:rgba(240,180,41,.6)}
-.nav-right{display:flex;align-items:center;gap:8px}
-.nav-btn{background:none;border:none;color:rgba(255,255,255,.75);font-family:var(--sans);font-size:13px;padding:7px 13px;border-radius:6px;cursor:pointer;transition:all .2s;font-weight:500}
-.nav-btn:hover{color:var(--gold-light);background:rgba(200,144,10,.12)}
-.nav-admin-btn{background:linear-gradient(135deg,var(--saffron),#FF8C00);color:#fff!important;border-radius:20px;padding:7px 16px!important;font-weight:600!important}
+.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(30,15,0,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(200,144,10,.3)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:60px}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none}
+.logo-icon{font-size:22px;line-height:1}
+.logo-text{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold-light);line-height:1.15}
+.logo-sub{font-size:10px;color:rgba(240,180,41,.5);letter-spacing:.3px}
+.nav-right{display:flex;align-items:center;gap:6px}
+.nav-btn{background:none;border:none;color:rgba(255,255,255,.7);font-family:var(--sans);font-size:13px;padding:7px 14px;border-radius:7px;cursor:pointer;transition:all .2s;font-weight:500}
+.nav-btn:hover{color:var(--gold-light);background:rgba(200,144,10,.1)}
+.nav-admin-btn{background:linear-gradient(135deg,var(--saffron),#FF8C00)!important;color:#fff!important;border-radius:20px;padding:7px 17px!important;font-weight:600!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
 .hamburger span{display:block;width:22px;height:2px;background:var(--gold-light);border-radius:2px;transition:all .3s}
-.mobile-nav{display:none;position:fixed;top:58px;inset-x:0;background:rgba(30,15,0,.98);z-index:99;padding:12px 16px;flex-direction:column;gap:4px;border-bottom:2px solid rgba(200,144,10,.3)}
+.mobile-nav{display:none;position:fixed;top:60px;inset-x:0;background:rgba(26,12,0,.99);z-index:99;padding:12px 16px;flex-direction:column;gap:4px;border-bottom:1px solid rgba(200,144,10,.25)}
 .mobile-nav.open{display:flex}
-.mobile-nav button{background:none;border:none;color:rgba(255,255,255,.85);font-family:var(--sans);font-size:15px;padding:12px 16px;border-radius:8px;cursor:pointer;text-align:left;transition:all .2s}
-.mobile-nav button:hover{background:rgba(200,144,10,.15);color:var(--gold-light)}
+.mobile-nav button{background:none;border:none;color:rgba(255,255,255,.8);font-family:var(--sans);font-size:15px;padding:12px 16px;border-radius:8px;cursor:pointer;text-align:left;transition:all .2s}
+.mobile-nav button:hover{background:rgba(200,144,10,.12);color:var(--gold-light)}
 
 /* PAGE */
-.page{display:none;padding-top:58px;min-height:100vh;animation:fadeUp .35s ease}
+.page{display:none;padding-top:60px;min-height:100vh;animation:fadeUp .3s ease}
 .page.active{display:block}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.container{max-width:1100px;margin:0 auto;padding:40px 20px}
-.two-col{display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:start}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.container{max-width:1120px;margin:0 auto;padding:40px 24px}
+.two-col{display:grid;grid-template-columns:1fr 310px;gap:32px;align-items:start}
 
 /* HERO */
-.hero-banner{background:linear-gradient(155deg,#1E0F00 0%,#3A1800 50%,#6B2000 100%);padding:56px 20px 48px;position:relative;overflow:hidden;text-align:center}
-.hero-banner::before{content:'🕉';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:280px;opacity:.04;pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,144,10,.15);border:1px solid rgba(200,144,10,.35);color:var(--gold-light);font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:14px;font-weight:500}
-.hero-title{font-family:var(--serif);font-size:clamp(26px,5vw,46px);color:#fff;line-height:1.2;margin-bottom:8px}
+.hero-banner{background:linear-gradient(150deg,#1A0A00 0%,#2E1200 45%,#5C2200 100%);padding:64px 24px 52px;position:relative;overflow:hidden;text-align:center}
+.hero-banner::before{content:'🕉';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:300px;opacity:.03;pointer-events:none;user-select:none}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,144,10,.12);border:1px solid rgba(200,144,10,.3);color:var(--gold-light);font-size:11.5px;padding:5px 15px;border-radius:20px;margin-bottom:16px;font-weight:500;letter-spacing:.3px}
+.hero-title{font-family:var(--serif);font-size:clamp(28px,5vw,50px);color:#fff;line-height:1.2;margin-bottom:10px}
 .hero-title span{color:var(--gold-light)}
-.hero-sub{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:22px;font-style:italic}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:26px;font-style:italic;letter-spacing:.2px}
+.hero-stats{display:flex;justify-content:center;gap:32px;margin-bottom:28px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--serif);font-size:22px;color:var(--gold-light);font-weight:700;line-height:1}
+.hero-stat-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px}
+.hero-divider{width:40px;height:1px;background:rgba(200,144,10,.3);margin:0 auto 28px}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .25s;font-family:var(--sans);border:none}
-.btn-primary{background:linear-gradient(135deg,var(--saffron),#FF8C00);color:#fff;box-shadow:0 4px 14px rgba(232,101,10,.35)}
-.btn-primary:hover{transform:translateY(-2px)}
-.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .25s;font-family:var(--sans);border:none;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--saffron),#FF8C00);color:#fff;box-shadow:0 4px 16px rgba(232,101,10,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 7px 22px rgba(232,101,10,.4)}
+.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 4px 16px rgba(37,211,102,.25)}
 .btn-wa:hover{transform:translateY(-2px)}
 .btn-gold{background:linear-gradient(135deg,var(--gold),#A07008);color:#fff}
-.btn-ghost{background:rgba(255,255,255,.06);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15)}
-.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-ghost{background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.12)}
+.btn-ghost:hover{background:rgba(255,255,255,.13)}
 .btn-outline{background:transparent;color:var(--saffron);border:2px solid var(--saffron)}
 .btn-outline:hover{background:var(--saffron);color:#fff}
-.btn-sm{padding:8px 16px;font-size:12px;border-radius:6px}
+.btn-sm{padding:7px 14px;font-size:12px;border-radius:7px}
 .btn-danger{background:#8B1A1A;color:#fff}
 .btn-danger:hover{background:#6B0E0E}
-.btn-disabled{opacity:.5;cursor:not-allowed}
 
 /* TICKER */
-.ticker{background:var(--red);padding:9px 0;overflow:hidden;white-space:nowrap}
-.ticker-inner{display:inline-flex;gap:60px;animation:ticker 25s linear infinite}
+.ticker{background:linear-gradient(90deg,#6B0E0E,#8B1A1A,#6B0E0E);padding:9px 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:60px;animation:ticker 28s linear infinite}
 @keyframes ticker{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
-.ticker-item{font-size:13px;color:rgba(255,255,255,.85);display:inline-flex;align-items:center;gap:8px}
-.ticker-dot{color:var(--gold-light);font-size:16px}
+.ticker-item{font-size:12.5px;color:rgba(255,255,255,.8);display:inline-flex;align-items:center;gap:8px}
+.ticker-dot{color:var(--gold-light);font-size:14px}
 
 /* POSTS */
-.posts-list{display:flex;flex-direction:column;gap:20px}
-.post-card{background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(0,0,0,.05);overflow:hidden;transition:all .3s;cursor:pointer}
-.post-card:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(200,144,10,.12);border-color:rgba(232,101,10,.3)}
-.post-card-top{padding:20px 22px 16px}
-.post-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.posts-list{display:flex;flex-direction:column;gap:18px}
+.post-card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;transition:all .28s;cursor:pointer}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 12px 38px rgba(200,144,10,.1);border-color:rgba(232,101,10,.25)}
+.post-card-top{padding:20px 22px 15px}
+.post-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .post-cat{background:var(--orange-bg);color:var(--saffron);font-size:11px;padding:3px 10px;border-radius:12px;font-weight:600}
-.post-date{font-size:12px;color:var(--light)}
+.post-date{font-size:11.5px;color:var(--light)}
 .post-title{font-family:var(--serif);font-size:clamp(17px,3vw,21px);color:var(--dark);margin-bottom:8px;line-height:1.4}
-.post-excerpt{font-size:13px;color:var(--mid);line-height:1.75;margin-bottom:14px}
-.post-card-footer{padding:12px 22px;background:var(--cream);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.post-emoji{font-size:28px;float:right;margin:-4px 0 0 14px}
+.post-excerpt{font-size:13px;color:var(--mid);line-height:1.8;margin-bottom:4px}
+.post-media-thumb{width:100%;max-height:200px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+.post-video-thumb{width:100%;border-radius:8px;margin-bottom:12px;background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:40px;color:rgba(255,255,255,.5)}
+.post-card-footer{padding:11px 22px;background:var(--cream);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.post-emoji{font-size:26px;float:right;margin:-3px 0 0 12px}
 .comment-count{font-size:12px;color:var(--light);display:flex;align-items:center;gap:5px}
 .read-more{font-size:12px;color:var(--saffron);font-weight:600}
 
 /* FILTER CHIPS */
-.chip{padding:7px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--mid);transition:all .2s;font-family:var(--sans)}
+.chips-wrap{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chip{padding:7px 15px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--mid);transition:all .2s;font-family:var(--sans)}
 .chip.active,.chip:hover{background:var(--saffron);color:#fff;border-color:var(--saffron)}
 
 /* SIDEBAR */
-.sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:80px}
-.sidebar-card{background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px;box-shadow:0 2px 16px rgba(0,0,0,.04)}
-.sidebar-title{font-family:var(--serif);font-size:16px;color:var(--dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.profile-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px;box-shadow:0 0 0 3px rgba(200,144,10,.2),0 0 0 6px rgba(200,144,10,.07)}
+.sidebar{display:flex;flex-direction:column;gap:18px;position:sticky;top:78px}
+.sidebar-card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);padding:20px;box-shadow:var(--shadow)}
+.sidebar-title{font-family:var(--serif);font-size:15px;color:var(--dark);margin-bottom:13px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px}
+.profile-avatar{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 12px;box-shadow:0 0 0 3px rgba(200,144,10,.2),0 0 0 6px rgba(200,144,10,.06)}
 .profile-name{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--dark);margin-bottom:3px;text-align:center}
-.profile-role{font-size:12px;color:var(--saffron);margin-bottom:10px;font-weight:500;text-align:center}
-.profile-bio{font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:14px;text-align:center}
-.profile-links{display:flex;flex-direction:column;gap:8px}
+.profile-role{font-size:11.5px;color:var(--saffron);margin-bottom:10px;font-weight:600;text-align:center;letter-spacing:.3px}
+.profile-bio{font-size:12.5px;color:var(--mid);line-height:1.75;margin-bottom:14px;text-align:center}
+.profile-links{display:flex;flex-direction:column;gap:7px}
 .profile-link{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:500;transition:all .2s}
 .profile-link.wa{background:#E8F8F0;color:#128C7E}
 .profile-link.ph{background:#FFF0D6;color:var(--saffron)}
 .profile-link.fb{background:#E8F0FF;color:#1877F2}
 .profile-link:hover{transform:translateX(3px)}
-.cat-item{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:8px;cursor:pointer;transition:all .2s;font-size:13px;color:var(--mid);font-weight:500}
+.cat-item{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:8px;cursor:pointer;transition:all .2s;font-size:13px;color:var(--mid);font-weight:500}
 .cat-item:hover,.cat-item.active{background:var(--orange-bg);color:var(--saffron)}
 .cat-count{background:var(--orange-bg);color:var(--saffron);font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
-.recent-item{cursor:pointer;padding:10px;border-radius:8px;transition:all .2s;border:1px solid transparent}
+.recent-item{cursor:pointer;padding:9px 10px;border-radius:8px;transition:all .2s;border:1px solid transparent}
 .recent-item:hover{background:var(--orange-bg);border-color:var(--border)}
-.recent-item-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.4;margin-bottom:3px}
+.recent-item-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.4;margin-bottom:2px}
 .recent-item-date{font-size:11px;color:var(--light)}
-.daily-box{background:linear-gradient(135deg,var(--red),#6B0E0E);border-radius:12px;padding:18px;text-align:center}
-.daily-label{font-size:10px;color:var(--gold-light);letter-spacing:2px;margin-bottom:6px;display:block;font-weight:600}
-.daily-text{font-family:var(--serif);font-size:13px;color:rgba(255,255,255,.9);line-height:1.7;font-style:italic}
+.daily-box{background:linear-gradient(135deg,#2C0A0A,#6B0E0E);border-radius:var(--radius);padding:20px;text-align:center;border:none!important}
+.daily-label{font-size:10px;color:var(--gold-light);letter-spacing:2px;margin-bottom:8px;display:block;font-weight:700}
+.daily-text{font-family:var(--serif);font-size:13px;color:rgba(255,255,255,.88);line-height:1.75;font-style:italic}
 
 /* SINGLE POST */
-.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--saffron);font-size:13px;font-weight:600;cursor:pointer;margin-bottom:20px;background:none;border:none;font-family:var(--sans);padding:0;transition:all .2s}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--saffron);font-size:13px;font-weight:600;cursor:pointer;margin-bottom:22px;background:none;border:none;font-family:var(--sans);padding:0;transition:all .2s}
 .back-btn:hover{transform:translateX(-3px)}
-.post-hero{background:linear-gradient(155deg,#1E0F00,#3A1800);padding:44px 28px;border-radius:18px;margin-bottom:28px;position:relative;overflow:hidden}
-.post-hero::after{content:attr(data-emoji);position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:80px;opacity:.15;pointer-events:none}
-.post-hero-cat{display:inline-flex;align-items:center;gap:6px;background:rgba(200,144,10,.15);border:1px solid rgba(200,144,10,.3);color:var(--gold-light);font-size:11px;padding:4px 12px;border-radius:20px;margin-bottom:12px;font-weight:500}
-.post-hero-title{font-family:var(--serif);font-size:clamp(22px,4vw,34px);color:#fff;line-height:1.3;margin-bottom:12px}
-.post-hero-date{font-size:13px;color:rgba(255,255,255,.55)}
-.post-body{background:#fff;border-radius:18px;border:1px solid var(--border);padding:32px 28px;margin-bottom:24px;box-shadow:0 2px 20px rgba(0,0,0,.05)}
-.post-body p{font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:16px}
-.post-body h3{font-family:var(--serif);font-size:20px;color:var(--dark);margin:24px 0 12px;padding-left:14px;border-left:3px solid var(--saffron)}
+.post-hero{background:linear-gradient(150deg,#1A0A00,#2E1200 60%,#4A1800);padding:44px 28px;border-radius:18px;margin-bottom:26px;position:relative;overflow:hidden}
+.post-hero::after{content:attr(data-emoji);position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:80px;opacity:.12;pointer-events:none}
+.post-hero-cat{display:inline-flex;align-items:center;gap:6px;background:rgba(200,144,10,.13);border:1px solid rgba(200,144,10,.28);color:var(--gold-light);font-size:11px;padding:4px 12px;border-radius:20px;margin-bottom:12px;font-weight:500}
+.post-hero-title{font-family:var(--serif);font-size:clamp(22px,4vw,36px);color:#fff;line-height:1.3;margin-bottom:12px}
+.post-hero-date{font-size:12.5px;color:rgba(255,255,255,.5)}
+.post-body{background:#fff;border-radius:18px;border:1px solid var(--border);padding:32px 28px;margin-bottom:22px;box-shadow:var(--shadow)}
+.post-body p{font-size:15px;color:var(--mid);line-height:1.95;margin-bottom:16px}
+.post-body h3{font-family:var(--serif);font-size:20px;color:var(--dark);margin:26px 0 12px;padding-left:14px;border-left:3px solid var(--saffron)}
 .post-body h4{font-family:var(--serif);font-size:17px;color:var(--dark);margin:18px 0 10px}
 .post-body ul{padding-left:20px;margin-bottom:16px}
-.post-body ul li{font-size:14px;color:var(--mid);line-height:1.8;margin-bottom:6px}
+.post-body ul li{font-size:14px;color:var(--mid);line-height:1.85;margin-bottom:6px}
 .post-body blockquote{background:var(--orange-bg);border-left:4px solid var(--saffron);padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;font-family:var(--serif);font-style:italic;color:var(--dark);font-size:15px}
-.post-share{background:var(--orange-bg);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px;border:1px solid rgba(232,101,10,.15)}
+.post-body img{max-width:100%;border-radius:10px;margin:14px 0;box-shadow:0 4px 18px rgba(0,0,0,.1)}
+.post-body video{max-width:100%;border-radius:10px;margin:14px 0}
+.post-body iframe{max-width:100%;border-radius:10px;margin:14px 0}
+.post-share{background:var(--orange-bg);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px;border:1px solid rgba(232,101,10,.12)}
 
 /* COMMENTS */
-.comments-section{background:#fff;border-radius:18px;border:1px solid var(--border);padding:28px;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+.comments-section{background:#fff;border-radius:18px;border:1px solid var(--border);padding:28px;box-shadow:var(--shadow)}
 .comments-title{font-family:var(--serif);font-size:20px;color:var(--dark);margin-bottom:22px;display:flex;align-items:center;gap:10px}
-.comment-form{background:var(--cream);border-radius:14px;padding:22px;margin-bottom:26px;border:1px solid var(--border)}
+.comment-form{background:var(--cream);border-radius:14px;padding:22px;margin-bottom:24px;border:1px solid var(--border)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{margin-bottom:14px}
 .form-label{display:block;font-size:12px;font-weight:600;color:var(--dark);margin-bottom:6px}
 .form-input,.form-textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:9px;font-family:var(--sans);font-size:14px;color:var(--dark);background:var(--warm);outline:none;transition:all .2s}
-.form-input:focus,.form-textarea:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,101,10,.08)}
+.form-input:focus,.form-textarea:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,101,10,.07)}
 .form-textarea{min-height:100px;resize:vertical}
 .comment-item{display:flex;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:4px;animation:fadeUp .3s ease}
 .comment-item:last-child{border-bottom:none;padding-bottom:0}
 .comment-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .comment-author{font-weight:700;color:var(--dark);font-size:14px}
-.comment-meta-row{font-size:12px;color:var(--light);margin-bottom:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.comment-meta-row{font-size:11.5px;color:var(--light);margin-bottom:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .comment-text{font-size:14px;color:var(--mid);line-height:1.75}
 .no-comments{text-align:center;padding:28px;color:var(--light);font-size:14px}
 .comment-success{background:#E8F8F0;border:1px solid #A8D8C0;border-radius:8px;padding:12px 16px;color:#128C7E;font-size:13px;font-weight:500;margin-bottom:14px;display:none}
 
 /* ADMIN */
-.admin-panel{background:linear-gradient(155deg,#1E0F00,#2C1800);min-height:calc(100vh - 58px);padding:40px 20px}
-.admin-inner{max-width:820px;margin:0 auto}
-.admin-header{color:var(--gold-light);font-family:var(--serif);font-size:24px;margin-bottom:6px}
-.admin-sub{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:28px}
-.admin-card{background:rgba(255,255,255,.05);border:1px solid rgba(200,144,10,.2);border-radius:16px;padding:26px;margin-bottom:22px}
-.admin-card h3{font-family:var(--serif);font-size:18px;color:var(--gold-light);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.admin-input,.admin-textarea,.admin-select{width:100%;padding:12px 16px;border:1.5px solid rgba(200,144,10,.25);border-radius:10px;font-family:var(--sans);font-size:14px;color:#fff;background:rgba(255,255,255,.08);outline:none;transition:all .2s;margin-bottom:14px}
-.admin-input:focus,.admin-textarea:focus,.admin-select:focus{border-color:var(--gold-light);box-shadow:0 0 0 3px rgba(200,144,10,.12)}
-.admin-input::placeholder,.admin-textarea::placeholder{color:rgba(255,255,255,.3)}
+.admin-panel{background:linear-gradient(155deg,#140800,#2C1800);min-height:calc(100vh - 60px);padding:40px 20px}
+.admin-inner{max-width:840px;margin:0 auto}
+.admin-header{color:var(--gold-light);font-family:var(--serif);font-size:24px;margin-bottom:4px}
+.admin-sub{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:28px}
+.admin-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,144,10,.18);border-radius:16px;padding:26px;margin-bottom:22px}
+.admin-card h3{font-family:var(--serif);font-size:18px;color:var(--gold-light);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.admin-input,.admin-textarea,.admin-select{width:100%;padding:12px 16px;border:1.5px solid rgba(200,144,10,.22);border-radius:10px;font-family:var(--sans);font-size:14px;color:#fff;background:rgba(255,255,255,.07);outline:none;transition:all .2s;margin-bottom:14px}
+.admin-input:focus,.admin-textarea:focus,.admin-select:focus{border-color:var(--gold-light);box-shadow:0 0 0 3px rgba(200,144,10,.1)}
+.admin-input::placeholder,.admin-textarea::placeholder{color:rgba(255,255,255,.28)}
 .admin-select option{background:#2C1800;color:#fff}
 .admin-textarea{min-height:240px;resize:vertical}
-.admin-label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,.6);margin-bottom:6px}
+.admin-label{display:block;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.55);margin-bottom:6px;letter-spacing:.3px}
 .admin-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.admin-post-item{background:rgba(255,255,255,.05);border:1px solid rgba(200,144,10,.15);border-radius:12px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
-.admin-post-title{font-size:14px;color:rgba(255,255,255,.85);font-weight:500;flex:1}
-.admin-post-date{font-size:11px;color:rgba(255,255,255,.4)}
-.admin-tab-bar{display:flex;gap:6px;margin-bottom:22px;background:rgba(255,255,255,.05);padding:5px;border-radius:12px;border:1px solid rgba(200,144,10,.15)}
-.admin-tab{flex:1;padding:9px;background:none;border:none;color:rgba(255,255,255,.5);font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;border-radius:8px;transition:all .2s}
+.admin-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.admin-post-item{background:rgba(255,255,255,.04);border:1px solid rgba(200,144,10,.13);border-radius:12px;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.admin-post-title{font-size:14px;color:rgba(255,255,255,.82);font-weight:500;flex:1}
+.admin-post-date{font-size:11px;color:rgba(255,255,255,.35)}
+.admin-tab-bar{display:flex;gap:6px;margin-bottom:22px;background:rgba(255,255,255,.04);padding:5px;border-radius:12px;border:1px solid rgba(200,144,10,.13)}
+.admin-tab{flex:1;padding:9px;background:none;border:none;color:rgba(255,255,255,.45);font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;border-radius:8px;transition:all .2s}
 .admin-tab.active{background:linear-gradient(135deg,var(--saffron),#FF8C00);color:#fff}
 .toolbar{display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap}
-.toolbar-btn{background:rgba(255,255,255,.08);border:1px solid rgba(200,144,10,.2);color:rgba(255,255,255,.7);padding:5px 10px;border-radius:6px;font-size:12px;cursor:pointer;font-family:var(--sans);transition:all .2s}
-.toolbar-btn:hover{background:rgba(200,144,10,.2);color:var(--gold-light)}
-.editor-help{background:rgba(200,144,10,.07);border:1px solid rgba(200,144,10,.2);border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:12px;color:rgba(255,255,255,.55);line-height:1.8}
-.editor-help b{color:rgba(255,255,255,.75)}
+.toolbar-btn{background:rgba(255,255,255,.07);border:1px solid rgba(200,144,10,.18);color:rgba(255,255,255,.65);padding:5px 10px;border-radius:6px;font-size:12px;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.toolbar-btn:hover{background:rgba(200,144,10,.18);color:var(--gold-light)}
+.editor-help{background:rgba(200,144,10,.06);border:1px solid rgba(200,144,10,.18);border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:12px;color:rgba(255,255,255,.5);line-height:1.8}
+.editor-help b{color:rgba(255,255,255,.7)}
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
 
+/* MEDIA UPLOAD */
+.media-upload-area{border:2px dashed rgba(200,144,10,.3);border-radius:10px;padding:20px;text-align:center;cursor:pointer;transition:all .25s;background:rgba(255,255,255,.03);margin-bottom:14px}
+.media-upload-area:hover,.media-upload-area.drag{border-color:var(--gold-light);background:rgba(200,144,10,.07)}
+.media-upload-area input[type=file]{display:none}
+.media-upload-label{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.8}
+.media-upload-label span{color:var(--gold-light);font-weight:600;cursor:pointer}
+.media-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-bottom:14px}
+.media-preview-item{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1;background:rgba(0,0,0,.3)}
+.media-preview-item img{width:100%;height:100%;object-fit:cover}
+.media-preview-item video{width:100%;height:100%;object-fit:cover}
+.media-preview-remove{position:absolute;top:4px;right:4px;background:rgba(139,26,26,.85);color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.media-url-input{width:100%;padding:10px 14px;border:1.5px solid rgba(200,144,10,.22);border-radius:9px;font-family:var(--sans);font-size:13px;color:#fff;background:rgba(255,255,255,.07);outline:none;margin-bottom:8px}
+.media-url-input::placeholder{color:rgba(255,255,255,.28)}
+.media-url-input:focus{border-color:var(--gold-light)}
+.media-tabs{display:flex;gap:0;margin-bottom:14px;border-radius:8px;overflow:hidden;border:1px solid rgba(200,144,10,.2)}
+.media-tab{flex:1;padding:8px;background:rgba(255,255,255,.04);border:none;color:rgba(255,255,255,.5);font-size:12px;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.media-tab.active{background:rgba(200,144,10,.2);color:var(--gold-light);font-weight:600}
+
+/* OPTIONAL BADGE */
+.optional-badge{font-size:10px;color:rgba(255,255,255,.35);font-weight:400;margin-left:6px;font-style:italic}
+
 /* LOGIN */
-.login-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 58px);background:linear-gradient(155deg,#1E0F00,#3A1800);padding:20px}
-.login-card{background:rgba(255,255,255,.06);border:1px solid rgba(200,144,10,.25);border-radius:20px;padding:36px 32px;max-width:380px;width:100%;backdrop-filter:blur(10px);text-align:center}
-.login-input{width:100%;padding:12px 16px;border:1.5px solid rgba(200,144,10,.25);border-radius:10px;font-family:var(--sans);font-size:14px;color:#fff;background:rgba(255,255,255,.08);outline:none;margin-bottom:12px;text-align:center;letter-spacing:2px;transition:all .2s}
+.login-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 60px);background:linear-gradient(155deg,#140800,#2E1200);padding:20px}
+.login-card{background:rgba(255,255,255,.05);border:1px solid rgba(200,144,10,.22);border-radius:22px;padding:38px 34px;max-width:380px;width:100%;backdrop-filter:blur(12px);text-align:center}
+.login-input{width:100%;padding:12px 16px;border:1.5px solid rgba(200,144,10,.22);border-radius:10px;font-family:var(--sans);font-size:14px;color:#fff;background:rgba(255,255,255,.07);outline:none;margin-bottom:12px;text-align:center;letter-spacing:2px;transition:all .2s}
 .login-input:focus{border-color:var(--gold-light)}
-.login-input::placeholder{letter-spacing:0;color:rgba(255,255,255,.3)}
-.login-error{background:rgba(139,26,26,.3);border:1px solid rgba(139,26,26,.5);color:#FFB5B5;border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:12px;display:none}
+.login-input::placeholder{letter-spacing:0;color:rgba(255,255,255,.28)}
+.login-error{background:rgba(139,26,26,.3);border:1px solid rgba(139,26,26,.4);color:#FFB5B5;border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:12px;display:none}
 
 /* PAGINATION */
 .pagination{display:flex;gap:8px;justify-content:center;margin-top:28px;flex-wrap:wrap}
@@ -223,39 +248,38 @@ h1,h2,h3,h4{font-family:var(--serif)}
 .float-pill:hover{transform:translateY(-3px)}
 .f-wa{background:linear-gradient(135deg,#25D366,#128C7E)}
 .f-call{background:linear-gradient(135deg,var(--saffron),#FF8C00)}
-.pulse{animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.35)}50%{box-shadow:0 4px 28px rgba(37,211,102,.6)}}
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.3)}50%{box-shadow:0 4px 28px rgba(37,211,102,.55)}}
 
 /* TOAST */
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#1E0F00;color:var(--gold-light);padding:12px 22px;border-radius:30px;font-size:13px;font-weight:500;border:1px solid rgba(200,144,10,.3);opacity:0;transition:all .3s;z-index:9999;pointer-events:none;white-space:nowrap}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#1E0F00;color:var(--gold-light);padding:12px 24px;border-radius:30px;font-size:13px;font-weight:500;border:1px solid rgba(200,144,10,.28);opacity:0;transition:all .3s;z-index:9999;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* SKELETON */
 .skeleton{background:linear-gradient(90deg,#f0e8d8 25%,#ffe8c8 50%,#f0e8d8 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:8px}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.skel-card{height:160px;border-radius:16px;margin-bottom:20px}
+.skel-card{height:160px;border-radius:16px;margin-bottom:18px}
 
 /* EMPTY */
 .empty-state{text-align:center;padding:60px 20px;color:var(--light)}
-.empty-icon{font-size:56px;margin-bottom:14px;opacity:.5}
+.empty-icon{font-size:52px;margin-bottom:14px;opacity:.45}
 .empty-text{font-size:16px;font-family:var(--serif)}
 
-/* DB not configured */
-.db-warn{background:linear-gradient(135deg,#2a1a00,#3a2800);border:1px solid rgba(240,180,41,.3);border-radius:14px;padding:24px;text-align:center;margin-bottom:24px}
-.db-warn-icon{font-size:40px;margin-bottom:12px}
-.db-warn-title{font-size:16px;font-weight:700;color:var(--gold-light);margin-bottom:8px;font-family:var(--serif)}
-.db-warn-text{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7}
+/* SECTION HEADING */
+.section-label{font-size:11px;font-weight:700;color:var(--saffron);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.section-label::before,.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
 @media(max-width:860px){.two-col{grid-template-columns:1fr}.sidebar{position:static}}
 @media(max-width:600px){
   .hamburger{display:flex}.nav-right .nav-btn:not(.nav-admin-btn){display:none}
-  .form-row{grid-template-columns:1fr}.admin-row{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}.admin-row{grid-template-columns:1fr}.admin-row-3{grid-template-columns:1fr}
   .float-pill span.fl-txt{display:none}.float-pill{padding:13px;border-radius:50%}
   .float-btns{bottom:18px;right:14px}
   .hero-btns .btn{width:100%;max-width:260px;justify-content:center}
   .hero-btns{flex-direction:column;align-items:center}
   .admin-post-item{flex-direction:column;align-items:flex-start}
   .post-share{flex-direction:column;gap:10px}
+  .hero-stats{gap:20px}
 }
 </style>
 </head>
@@ -263,7 +287,6 @@ h1,h2,h3,h4{font-family:var(--serif)}
 
 <div id="loader"><div class="loader-om">🕉</div><div class="loader-text">लोड हुँदैछ...</div></div>
 <div class="toast" id="toast"></div>
-<div class="setup-banner" id="setupBanner">⚙️ Supabase अझै कनेक्ट भएको छैन। Admin panel मा जानुहोस् र README.md अनुसार सेटअप गर्नुहोस्।</div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -289,23 +312,32 @@ h1,h2,h3,h4{font-family:var(--serif)}
 <div class="page active" id="page-blog">
   <div class="hero-banner">
     <div class="hero-badge">✨ वैदिक ज्योतिष ज्ञान</div>
-    <h1 class="hero-title">ज्योतिषाचार्य<br><span>शिवराम पराजुली</span></h1>
+    <h1 class="hero-title"><span>शिवराम पराजुली</span></h1>
     <p class="hero-sub">"तपाईंको भविष्यको सही मार्गदर्शन"</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">१५+</div><div class="hero-stat-label">वर्षको अनुभव</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">५०००+</div><div class="hero-stat-label">परामर्श</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">🕉</div><div class="hero-stat-label">ज्योतिष</div></div>
+    </div>
+    <div class="hero-divider"></div>
     <div class="hero-btns">
       <a href="tel:9847452906" class="btn btn-primary">📞 <span class="fl-txt">फोन गर्नुहोस्</span></a>
       <a href="https://wa.me/9779847452906?text=नमस्ते, मलाई ज्योतिष परामर्श चाहिएको थियो।" target="_blank" class="btn btn-wa pulse">💬 <span class="fl-txt">WhatsApp</span></a>
     </div>
   </div>
+
   <div class="ticker"><div class="ticker-inner">
     <span class="ticker-item"><span class="ticker-dot">🪔</span>नवीनतम ज्योतिष लेखहरू पढ्नुहोस्</span>
     <span class="ticker-item"><span class="ticker-dot">⭐</span>WhatsApp मार्फत कुण्डली परामर्श उपलब्ध</span>
     <span class="ticker-item"><span class="ticker-dot">🕉</span>पराशर ज्योतिष विशेषज्ञ — १५+ वर्षको अनुभव</span>
+    <span class="ticker-item"><span class="ticker-dot">🪐</span>ग्रह दोष उपाय र रत्न परामर्श</span>
   </div></div>
 
   <div class="container">
     <div class="two-col">
       <div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px" id="filterChips"></div>
+        <div class="section-label">सबै लेखहरू</div>
+        <div class="chips-wrap" id="filterChips"></div>
         <div id="postsContainer"><div class="skeleton skel-card"></div><div class="skeleton skel-card"></div><div class="skeleton skel-card"></div></div>
         <div class="pagination" id="pagination"></div>
       </div>
@@ -338,7 +370,7 @@ h1,h2,h3,h4{font-family:var(--serif)}
             <div class="comment-success" id="commentSuccess">✅ टिप्पणी थपियो!</div>
             <div class="form-row">
               <div><label class="form-label">नाम *</label><input type="text" id="cName" class="form-input" placeholder="आफ्नो नाम"></div>
-              <div><label class="form-label">ठेगाना (वैकल्पिक)</label><input type="text" id="cLoc" class="form-input" placeholder="जिल्ला / शहर"></div>
+              <div><label class="form-label">ठेगाना <span style="font-size:10px;color:var(--light);font-weight:400">(वैकल्पिक)</span></label><input type="text" id="cLoc" class="form-input" placeholder="जिल्ला / शहर"></div>
             </div>
             <div class="form-group">
               <label class="form-label">टिप्पणी *</label>
@@ -360,7 +392,7 @@ h1,h2,h3,h4{font-family:var(--serif)}
     <div class="login-card">
       <div style="font-size:48px;margin-bottom:16px">🔐</div>
       <div style="font-family:var(--serif);font-size:22px;color:var(--gold-light);margin-bottom:6px">Admin Login</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:24px">Admin पासवर्ड प्रविष्ट गर्नुहोस्</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.45);margin-bottom:24px">Admin पासवर्ड प्रविष्ट गर्नुहोस्</div>
       <div class="login-error" id="loginErr">❌ गलत पासवर्ड!</div>
       <input type="password" id="adminPass" class="login-input" placeholder="पासवर्ड" onkeydown="if(event.key==='Enter')doLogin()">
       <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:4px" onclick="doLogin()">🔓 प्रवेश गर्नुहोस्</button>
@@ -378,20 +410,10 @@ h1,h2,h3,h4{font-family:var(--serif)}
       </div>
       <p class="admin-sub">ब्लग पोस्ट व्यवस्थापन | शिवराम पराजुली</p>
 
-      <!-- DB not configured warning -->
-      <div id="dbWarn" class="db-warn" style="display:none">
-        <div class="db-warn-icon">⚠️</div>
-        <div class="db-warn-title">Supabase अझै कनेक्ट भएको छैन</div>
-        <div class="db-warn-text">
-          index.html को माथिल्लो भागमा <b>SUPABASE_URL</b> र <b>SUPABASE_ANON_KEY</b> राख्नुहोस्।<br>
-          README.md मा पूरा निर्देशन छ।
-        </div>
-      </div>
-
       <div class="admin-tab-bar">
         <button class="admin-tab active" id="tabNew" onclick="switchTab('new')">✏️ नयाँ पोस्ट</button>
         <button class="admin-tab" id="tabPosts" onclick="switchTab('posts')">📋 पोस्टहरू</button>
-        <button class="admin-tab" id="tabComments" onclick="switchTab('comments')">💬 टिप्पणीहरू</button>
+        <button class="admin-tab" id="tabComments" onclick="switchTab('comments')">💬 टिप्पणी</button>
       </div>
 
       <!-- NEW POST TAB -->
@@ -399,29 +421,43 @@ h1,h2,h3,h4{font-family:var(--serif)}
         <div class="admin-card">
           <h3 id="formHeading">✏️ नयाँ पोस्ट थप्नुहोस्</h3>
           <input type="hidden" id="editId">
+
+          <!-- TITLE -->
           <label class="admin-label">शीर्षक *</label>
           <input type="text" id="fTitle" class="admin-input" placeholder="पोस्टको शीर्षक लेख्नुहोस्">
+
+          <!-- CATEGORY + EMOJI -->
           <div class="admin-row">
             <div>
-              <label class="admin-label">विषय *</label>
-              <select id="fCategory" class="admin-input admin-select">
-                <option value="">विषय छान्नुहोस्</option>
-                <option>कुण्डली ज्ञान</option><option>विवाह मिलान</option>
-                <option>ग्रह दोष</option><option>व्यवसाय र करियर</option>
-                <option>वास्तु</option><option>उपाय र रत्न</option>
-                <option>आध्यात्म</option><option>विशेष लेख</option>
-              </select>
+              <label class="admin-label">विषय <span class="optional-badge">(वैकल्पिक)</span></label>
+              <input type="text" id="fCategory" class="admin-input" placeholder="विषय लेख्नुहोस् वा छान्नुहोस्" list="categoryList">
+              <datalist id="categoryList">
+                <option value="कुण्डली ज्ञान">
+                <option value="विवाह मिलान">
+                <option value="ग्रह दोष">
+                <option value="व्यवसाय र करियर">
+                <option value="वास्तु">
+                <option value="उपाय र रत्न">
+                <option value="आध्यात्म">
+                <option value="विशेष लेख">
+                <option value="राशिफल">
+                <option value="पूजा विधि">
+              </datalist>
             </div>
             <div>
-              <label class="admin-label">इमोजी</label>
+              <label class="admin-label">इमोजी <span class="optional-badge">(वैकल्पिक)</span></label>
               <input type="text" id="fEmoji" class="admin-input" placeholder="🔮" maxlength="4">
             </div>
           </div>
-          <label class="admin-label">छोटो सारांश *</label>
-          <input type="text" id="fExcerpt" class="admin-input" placeholder="पोस्टको छोटो विवरण">
-          <label class="admin-label">पोस्टको सामग्री *</label>
+
+          <!-- EXCERPT -->
+          <label class="admin-label">छोटो सारांश <span class="optional-badge">(वैकल्पिक)</span></label>
+          <input type="text" id="fExcerpt" class="admin-input" placeholder="पोस्टको छोटो विवरण (नभए शीर्षकबाट बनाइन्छ)">
+
+          <!-- CONTENT -->
+          <label class="admin-label">पोस्टको सामग्री <span class="optional-badge">(वैकल्पिक)</span></label>
           <div class="editor-help">
-            <b>## शीर्षक</b> → ठूलो शीर्षक &nbsp;|&nbsp; <b>**पाठ**</b> → बोल्ड &nbsp;|&nbsp; <b>> पाठ</b> → उद्धरण &nbsp;|&nbsp; <b>- वस्तु</b> → सूची
+            <b>## शीर्षक</b> → ठूलो &nbsp;|&nbsp; <b>**पाठ**</b> → बोल्ड &nbsp;|&nbsp; <b>> पाठ</b> → उद्धरण &nbsp;|&nbsp; <b>- वस्तु</b> → सूची &nbsp;|&nbsp; <b>![alt](url)</b> → फोटो &nbsp;|&nbsp; <b>[video](url)</b> → भिडियो
           </div>
           <div class="toolbar">
             <button class="toolbar-btn" onclick="insertMd('## ','')">H2</button>
@@ -429,9 +465,46 @@ h1,h2,h3,h4{font-family:var(--serif)}
             <button class="toolbar-btn" onclick="insertMd('**','**')"><b>B</b></button>
             <button class="toolbar-btn" onclick="insertMd('> ','')">❝</button>
             <button class="toolbar-btn" onclick="insertMd('- ','')">• सूची</button>
+            <button class="toolbar-btn" onclick="insertMd('![फोटो](',')')">🖼 फोटो URL</button>
+            <button class="toolbar-btn" onclick="insertMd('[video](',')')">🎬 भिडियो URL</button>
           </div>
-          <textarea id="fContent" class="admin-textarea" placeholder="यहाँ पोस्टको पूरा सामग्री लेख्नुहोस्...&#10;&#10;## शीर्षक&#10;&#10;विवरण...&#10;&#10;> उद्धरण&#10;&#10;- सूची वस्तु"></textarea>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px">
+          <textarea id="fContent" class="admin-textarea" placeholder="यहाँ पोस्टको पूरा सामग्री लेख्नुहोस्...&#10;&#10;## शीर्षक&#10;&#10;विवरण...&#10;&#10;> उद्धरण&#10;&#10;- सूची वस्तु&#10;&#10;![फोटो विवरण](https://example.com/photo.jpg)&#10;&#10;[video](https://youtube.com/watch?v=...)"></textarea>
+
+          <!-- MEDIA UPLOAD -->
+          <label class="admin-label" style="margin-top:6px">मिडिया अपलोड <span class="optional-badge">(वैकल्पिक)</span></label>
+          <div class="media-tabs">
+            <button class="media-tab active" onclick="switchMediaTab('upload',this)">📁 फाइल अपलोड</button>
+            <button class="media-tab" onclick="switchMediaTab('url',this)">🔗 URL राख्नुहोस्</button>
+          </div>
+
+          <!-- UPLOAD TAB -->
+          <div id="mediaUploadTab">
+            <div class="media-upload-area" id="dropZone" onclick="document.getElementById('mediaFileInput').click()" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFiles(event)">
+              <input type="file" id="mediaFileInput" multiple accept="image/*,video/*" onchange="handleFiles(this.files)">
+              <div class="media-upload-label">
+                📸 <span>फोटो वा भिडियो छान्नुहोस्</span><br>
+                वा यहाँ drag & drop गर्नुहोस्<br>
+                <small style="color:rgba(255,255,255,.25)">JPG, PNG, GIF, MP4, MOV — अधिकतम 50MB</small>
+              </div>
+            </div>
+            <div class="media-preview-grid" id="mediaPreviewGrid"></div>
+            <div id="uploadedUrlsHint" style="font-size:11.5px;color:rgba(255,255,255,.35);margin-bottom:6px;display:none">
+              ✅ अपलोड भएका फाइलहरूको URL तलको Content मा थपिनेछ।
+            </div>
+          </div>
+
+          <!-- URL TAB -->
+          <div id="mediaUrlTab" style="display:none">
+            <div style="margin-bottom:8px">
+              <input type="text" id="mediaUrlInput" class="media-url-input" placeholder="https://example.com/photo.jpg वा YouTube URL">
+              <div style="display:flex;gap:8px">
+                <button class="toolbar-btn" onclick="insertMediaUrl('image')">🖼 फोटो थप्नुहोस्</button>
+                <button class="toolbar-btn" onclick="insertMediaUrl('video')">🎬 भिडियो थप्नुहोस्</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
             <button class="btn btn-primary" id="saveBtn" onclick="savePost()">💾 <span id="saveBtnLabel">प्रकाशित गर्नुहोस्</span></button>
             <button class="btn btn-ghost btn-sm" onclick="cancelEdit()">रद्द</button>
           </div>
@@ -465,7 +538,7 @@ h1,h2,h3,h4{font-family:var(--serif)}
 
 <script>
 // ═══════════════════════════════════════════
-//  SUPABASE CLIENT (lightweight, no SDK)
+//  SUPABASE CLIENT
 // ═══════════════════════════════════════════
 const DB_READY = SUPABASE_URL !== 'YOUR_SUPABASE_URL';
 
@@ -502,7 +575,6 @@ const db = {
   getAllComments: () => dbFetch('comments?select=*,posts(title)&order=created_at.desc&limit=50'),
   createComment: (data) => dbFetch('comments', { method: 'POST', body: JSON.stringify(data) }),
   deleteComment: (id) => dbFetch(`comments?id=eq.${id}`, { method: 'DELETE', prefer: 'return=minimal' }),
-  getCommentCounts: () => dbFetch('comments?select=post_id')
 };
 
 // ═══════════════════════════════════════════
@@ -514,32 +586,23 @@ let isAdmin = false;
 let activeCategory = 'all';
 let currentPage = 1;
 const PER_PAGE = 6;
+let uploadedMediaUrls = [];
 
 // ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
 async function init() {
-  if (!DB_READY) {
-    document.getElementById('setupBanner').classList.add('show');
-  }
-  try {
-    await loadBlog();
-  } catch(e) {
-    renderOffline();
-  }
+  try { await loadBlog(); } catch(e) { renderOffline(); }
   setDailyMsg();
-  setTimeout(() => document.getElementById('loader').classList.add('hide'), 900);
+  setTimeout(() => document.getElementById('loader').classList.add('hide'), 800);
 }
 
 // ═══════════════════════════════════════════
 //  BLOG PAGE
 // ═══════════════════════════════════════════
 async function loadBlog() {
-  try {
-    allPosts = await db.getPosts() || [];
-  } catch {
-    allPosts = getSamplePosts();
-  }
+  try { allPosts = await db.getPosts() || []; }
+  catch { allPosts = getSamplePosts(); }
   renderFilterChips();
   renderPosts();
   renderSidebar('blogSidebar');
@@ -547,9 +610,7 @@ async function loadBlog() {
 
 function renderOffline() {
   allPosts = getSamplePosts();
-  renderFilterChips();
-  renderPosts();
-  renderSidebar('blogSidebar');
+  renderFilterChips(); renderPosts(); renderSidebar('blogSidebar');
 }
 
 function renderFilterChips() {
@@ -557,16 +618,14 @@ function renderFilterChips() {
   allPosts.forEach(p => { cats[p.category] = (cats[p.category]||0)+1; });
   const el = document.getElementById('filterChips');
   el.innerHTML = `<button class="chip ${activeCategory==='all'?'active':''}" onclick="filterBy('all')">📖 सबै (${allPosts.length})</button>` +
-    Object.entries(cats).map(([c,n]) =>
+    Object.entries(cats).filter(([c])=>c&&c!=='undefined').map(([c,n]) =>
       `<button class="chip ${activeCategory===c?'active':''}" onclick="filterBy('${escAttr(c)}')">${c} (${n})</button>`
     ).join('');
 }
 
 function filterBy(cat) {
-  activeCategory = cat;
-  currentPage = 1;
-  renderFilterChips();
-  renderPosts();
+  activeCategory = cat; currentPage = 1;
+  renderFilterChips(); renderPosts();
 }
 
 function renderPosts() {
@@ -593,28 +652,38 @@ function renderPosts() {
 function postCardHTML(p) {
   const d = new Date(p.created_at).toLocaleDateString('ne-NP',{year:'numeric',month:'long',day:'numeric'});
   const rt = Math.max(1, Math.ceil((p.content||'').split(' ').length/150));
+  const mediaThumb = getFirstMedia(p.content);
   return `
   <div class="post-card" onclick="openPost('${p.id}')">
     <div class="post-card-top">
       <span class="post-emoji">${p.emoji||'🔮'}</span>
       <div class="post-meta">
-        <span class="post-cat">${esc(p.category)}</span>
+        ${p.category ? `<span class="post-cat">${esc(p.category)}</span>` : ''}
         <span class="post-date">📅 ${d}</span>
         <span class="post-date">⏱ ${rt} मिनेट</span>
       </div>
       <h2 class="post-title">${esc(p.title)}</h2>
-      <p class="post-excerpt">${esc(p.excerpt)}</p>
+      ${p.excerpt ? `<p class="post-excerpt">${esc(p.excerpt)}</p>` : ''}
+      ${mediaThumb ? mediaThumb : ''}
     </div>
     <div class="post-card-footer">
-      <span class="comment-count">💬 टिप्पणी पढ्नुहोस्</span>
+      <span class="comment-count">💬 टिप्पणी गर्नुहोस्</span>
       <span class="read-more">पढ्नुहोस् →</span>
     </div>
   </div>`;
 }
 
+function getFirstMedia(content) {
+  if (!content) return '';
+  const imgMatch = content.match(/!\[.*?\]\((https?:\/\/[^\)]+)\)/);
+  if (imgMatch) return `<img class="post-media-thumb" src="${escAttr(imgMatch[1])}" alt="media" loading="lazy">`;
+  const vidMatch = content.match(/\[video\]\((https?:\/\/[^\)]+)\)/);
+  if (vidMatch) return `<div class="post-video-thumb">▶</div>`;
+  return '';
+}
+
 function goPage(n) {
-  currentPage = n;
-  renderPosts();
+  currentPage = n; renderPosts();
   document.querySelector('.two-col').scrollIntoView({behavior:'smooth'});
 }
 
@@ -624,21 +693,15 @@ function goPage(n) {
 async function openPost(id) {
   currentPostId = id;
   showPage('post');
-
   let p;
-  try {
-    const arr = await db.getPost(id);
-    p = arr?.[0];
-  } catch {
-    p = allPosts.find(x => x.id == id);
-  }
+  try { const arr = await db.getPost(id); p = arr?.[0]; }
+  catch { p = allPosts.find(x => x.id == id); }
   if (!p) return;
 
   const d = new Date(p.created_at).toLocaleDateString('ne-NP',{year:'numeric',month:'long',day:'numeric'});
   const rt = Math.max(1, Math.ceil((p.content||'').split(' ').length/150));
-
   document.getElementById('postHero').setAttribute('data-emoji', p.emoji||'🔮');
-  document.getElementById('postHeroCat').textContent = p.category;
+  document.getElementById('postHeroCat').textContent = p.category || '';
   document.getElementById('postHeroTitle').textContent = p.title;
   document.getElementById('postHeroDate').textContent = `📅 ${d} • ⏱ ${rt} मिनेट पढाइ`;
   document.getElementById('postBody').innerHTML = mdToHTML(p.content||'');
@@ -652,30 +715,50 @@ async function openPost(id) {
 }
 
 // ═══════════════════════════════════════════
+//  MARKDOWN → HTML (with media)
+// ═══════════════════════════════════════════
+function mdToHTML(md) {
+  if (!md) return '';
+  let h = md.replace(/\r\n/g,'\n')
+    .replace(/^## (.+)$/gm,'<h3>$1</h3>')
+    .replace(/^### (.+)$/gm,'<h4>$1</h4>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/^> (.+)$/gm,'<blockquote>$1</blockquote>')
+    .replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:20px 0">')
+    .replace(/^- (.+)$/gm,'<li>$1</li>')
+    // Images: ![alt](url)
+    .replace(/!\[([^\]]*)\]\((https?:\/\/[^\)]+)\)/g,'<img src="$2" alt="$1" style="max-width:100%;border-radius:10px;margin:14px 0;box-shadow:0 4px 18px rgba(0,0,0,.1)">')
+    // Videos: [video](url) — YouTube / direct
+    .replace(/\[video\]\((https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([^\)&]+)[^\)]*)\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$2" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
+    .replace(/\[video\]\((https?:\/\/(?:www\.)?youtu\.be\/([^\)]+)\))/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="https://www.youtube.com/embed/$2" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>')
+    .replace(/\[video\]\((https?:\/\/[^\)]+\.(?:mp4|mov|webm|ogg)[^\)]*)\)/g,'<video controls style="max-width:100%;border-radius:10px;margin:14px 0"><source src="$1">भिडियो लोड भएन।</video>')
+    .replace(/\[video\]\((https?:\/\/[^\)]+)\)/g,'<div style="position:relative;padding-bottom:56.25%;height:0;margin:14px 0;border-radius:10px;overflow:hidden"><iframe src="$1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>');
+
+  h = h.replace(/(<li>.*<\/li>\n?)+/g, m=>`<ul>${m}</ul>`);
+  const lines = h.split('\n\n');
+  return lines.map(l => {
+    l = l.trim(); if (!l) return '';
+    if (/^<(h[234]|ul|blockquote|hr|img|video|div|iframe)/.test(l)) return l;
+    return `<p>${l.replace(/\n/g,'<br>')}</p>`;
+  }).filter(Boolean).join('\n');
+}
+
+// ═══════════════════════════════════════════
 //  COMMENTS
 // ═══════════════════════════════════════════
 async function loadComments(postId) {
-  const el = document.getElementById('commentList');
-  try {
-    const list = await db.getComments(postId);
-    renderComments(list || []);
-  } catch {
-    renderComments([]);
-  }
+  try { const list = await db.getComments(postId); renderComments(list || []); }
+  catch { renderComments([]); }
 }
 
 function renderComments(list) {
   document.getElementById('commentCount').textContent = list.length;
   const el = document.getElementById('commentList');
   const emojis = ['😊','🙂','😄','🌸','🙏','⭐','🌟','🌺'];
-  if (!list.length) {
-    el.innerHTML = `<div class="no-comments">💬 पहिलो टिप्पणी लेख्नुहोस्!</div>`;
-    return;
-  }
+  if (!list.length) { el.innerHTML = `<div class="no-comments">💬 पहिलो टिप्पणी लेख्नुहोस्!</div>`; return; }
   el.innerHTML = list.map((c,i) => {
     const d = new Date(c.created_at).toLocaleDateString('ne-NP');
-    return `
-    <div class="comment-item">
+    return `<div class="comment-item">
       <div class="comment-avatar">${emojis[i%emojis.length]}</div>
       <div style="flex:1">
         <div class="comment-meta-row">
@@ -695,11 +778,8 @@ async function submitComment() {
   const loc = document.getElementById('cLoc').value.trim();
   const text = document.getElementById('cText').value.trim();
   if (!name || !text) { showToast('❌ नाम र टिप्पणी आवश्यक छ।'); return; }
-
   const btn = document.getElementById('submitCommentBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span>पठाउँदैछ...';
-
+  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>पठाउँदैछ...';
   try {
     await db.createComment({ post_id: currentPostId, name, location: loc||null, text });
     document.getElementById('cName').value = '';
@@ -710,20 +790,14 @@ async function submitComment() {
     setTimeout(() => succ.style.display='none', 3000);
     await loadComments(currentPostId);
     showToast('✅ टिप्पणी थपियो!');
-  } catch(e) {
-    showToast('❌ त्रुटि भयो। फेरि प्रयास गर्नुहोस्।');
-  }
-  btn.disabled = false;
-  btn.innerHTML = '💬 पठाउनुहोस्';
+  } catch { showToast('❌ त्रुटि भयो। फेरि प्रयास गर्नुहोस्।'); }
+  btn.disabled = false; btn.innerHTML = '💬 पठाउनुहोस्';
 }
 
 async function adminDeleteComment(id) {
   if (!confirm('यो टिप्पणी हटाउने?')) return;
-  try {
-    await db.deleteComment(id);
-    await loadComments(currentPostId);
-    showToast('🗑 टिप्पणी हटाइयो।');
-  } catch { showToast('❌ त्रुटि भयो।'); }
+  try { await db.deleteComment(id); await loadComments(currentPostId); showToast('🗑 टिप्पणी हटाइयो।'); }
+  catch { showToast('❌ त्रुटि भयो।'); }
 }
 
 // ═══════════════════════════════════════════
@@ -731,14 +805,14 @@ async function adminDeleteComment(id) {
 // ═══════════════════════════════════════════
 function renderSidebar(elId, currentId, currentCat) {
   const cats = {};
-  allPosts.forEach(p => { cats[p.category] = (cats[p.category]||0)+1; });
+  allPosts.forEach(p => { if (p.category) cats[p.category] = (cats[p.category]||0)+1; });
   const recent = [...allPosts].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at)).filter(p=>p.id!=currentId).slice(0,5);
 
   document.getElementById(elId).innerHTML = `
     <div class="sidebar-card">
       <div class="profile-avatar">🧘</div>
       <div class="profile-name">शिवराम पराजुली</div>
-      <div class="profile-role">ज्योतिषाचार्य | पराशर विशेषज्ञ</div>
+      <div class="profile-role">ज्योतिषाचार्य • पराशर विशेषज्ञ</div>
       <p class="profile-bio">वैदिक ज्योतिषको १५+ वर्षको अनुभवसाथ सेवामा समर्पित।</p>
       <div class="profile-links">
         <a href="https://wa.me/9779847452906?text=नमस्ते, परामर्श चाहिएको थियो।" target="_blank" class="profile-link wa">💬 WhatsApp परामर्श</a>
@@ -746,18 +820,19 @@ function renderSidebar(elId, currentId, currentCat) {
         <a href="https://www.facebook.com/shivramparajuli" target="_blank" class="profile-link fb">📘 Facebook</a>
       </div>
     </div>
-    <div class="daily-box sidebar-card" style="padding:0;border:none">
-      <span class="daily-label" style="padding-top:18px;display:block">✨ आजको सन्देश</span>
-      <p class="daily-text" style="padding:8px 18px 18px" id="dailyMsgEl"></p>
+    <div class="daily-box">
+      <span class="daily-label">✨ आजको सन्देश</span>
+      <p class="daily-text" id="dailyMsgEl"></p>
     </div>
+    ${Object.keys(cats).length ? `
     <div class="sidebar-card">
       <div class="sidebar-title">📂 विषयहरू</div>
       <div>${Object.entries(cats).map(([c,n])=>`
-        <div class="cat-item" onclick="filterBy('${escAttr(c)}');showPage('blog')">
+        <div class="cat-item ${currentCat===c?'active':''}" onclick="filterBy('${escAttr(c)}');showPage('blog')">
           <span>${c}</span><span class="cat-count">${n}</span>
         </div>`).join('')}
       </div>
-    </div>
+    </div>` : ''}
     ${recent.length ? `
     <div class="sidebar-card">
       <div class="sidebar-title">🕐 हालका पोस्टहरू</div>
@@ -771,6 +846,68 @@ function renderSidebar(elId, currentId, currentCat) {
 }
 
 // ═══════════════════════════════════════════
+//  MEDIA UPLOAD
+// ═══════════════════════════════════════════
+function switchMediaTab(tab, btn) {
+  document.getElementById('mediaUploadTab').style.display = tab==='upload' ? '' : 'none';
+  document.getElementById('mediaUrlTab').style.display = tab==='url' ? '' : 'none';
+  document.querySelectorAll('.media-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function dragOver(e) { e.preventDefault(); document.getElementById('dropZone').classList.add('drag'); }
+function dragLeave(e) { document.getElementById('dropZone').classList.remove('drag'); }
+function dropFiles(e) {
+  e.preventDefault();
+  document.getElementById('dropZone').classList.remove('drag');
+  handleFiles(e.dataTransfer.files);
+}
+
+function handleFiles(files) {
+  const grid = document.getElementById('mediaPreviewGrid');
+  Array.from(files).forEach(file => {
+    if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const url = e.target.result;
+      const item = document.createElement('div');
+      item.className = 'media-preview-item';
+      const isVideo = file.type.startsWith('video/');
+      item.innerHTML = isVideo
+        ? `<video src="${url}" muted playsinline></video>`
+        : `<img src="${url}" alt="preview">`;
+
+      const btn = document.createElement('button');
+      btn.className = 'media-preview-remove';
+      btn.innerHTML = '✕';
+      btn.onclick = (ev) => { ev.stopPropagation(); item.remove(); };
+      item.appendChild(btn);
+      grid.appendChild(item);
+
+      // Auto-insert markdown into content
+      const ta = document.getElementById('fContent');
+      const cursor = ta.selectionStart;
+      const insert = isVideo ? `\n[video](${url})\n` : `\n![${file.name}](${url})\n`;
+      ta.value = ta.value.substring(0,cursor) + insert + ta.value.substring(cursor);
+      showToast('✅ मिडिया थपियो!');
+    };
+    reader.readAsDataURL(file);
+  });
+  document.getElementById('uploadedUrlsHint').style.display = 'block';
+}
+
+function insertMediaUrl(type) {
+  const url = document.getElementById('mediaUrlInput').value.trim();
+  if (!url) { showToast('❌ URL राख्नुहोस्।'); return; }
+  const ta = document.getElementById('fContent');
+  const cursor = ta.selectionStart;
+  const insert = type === 'image' ? `\n![फोटो](${url})\n` : `\n[video](${url})\n`;
+  ta.value = ta.value.substring(0,cursor) + insert + ta.value.substring(cursor);
+  document.getElementById('mediaUrlInput').value = '';
+  showToast('✅ ' + (type==='image'?'फोटो':'भिडियो') + ' URL थपियो!');
+}
+
+// ═══════════════════════════════════════════
 //  ADMIN
 // ═══════════════════════════════════════════
 function doLogin() {
@@ -780,7 +917,6 @@ function doLogin() {
     document.getElementById('loginErr').style.display = 'none';
     document.getElementById('adminPass').value = '';
     showPage('admin');
-    if (!DB_READY) document.getElementById('dbWarn').style.display = 'block';
     loadAdminPosts();
     showToast('✅ Admin मा स्वागत!');
   } else {
@@ -789,11 +925,7 @@ function doLogin() {
   }
 }
 
-function adminLogout() {
-  isAdmin = false;
-  showPage('blog');
-  showToast('लग आउट भयो।');
-}
+function adminLogout() { isAdmin = false; showPage('blog'); showToast('लग आउट भयो।'); }
 
 function switchTab(tab) {
   ['new','posts','comments'].forEach(t => {
@@ -815,17 +947,14 @@ async function loadAdminPosts() {
       <div class="admin-post-item">
         <div>
           <div class="admin-post-title">${p.emoji||'🔮'} ${esc(p.title)}</div>
-          <div class="admin-post-date">${p.category} • ${new Date(p.created_at).toLocaleDateString('ne-NP')}</div>
+          <div class="admin-post-date">${p.category||'—'} • ${new Date(p.created_at).toLocaleDateString('ne-NP')}</div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0">
           <button class="btn btn-ghost btn-sm" onclick="editPost(${p.id})">✏️</button>
           <button class="btn btn-danger btn-sm" onclick="removePost(${p.id})">🗑</button>
         </div>
       </div>`).join('');
-    // refresh local cache
-    allPosts = posts;
-    renderFilterChips();
-    renderPosts();
+    allPosts = posts; renderFilterChips(); renderPosts();
   } catch(e) {
     el.innerHTML = `<p style="color:#FF9999;text-align:center;padding:20px">❌ ${e.message}</p>`;
   }
@@ -837,13 +966,13 @@ async function loadAdminComments() {
     const list = await db.getAllComments() || [];
     if (!list.length) { el.innerHTML='<p style="color:rgba(255,255,255,.4);text-align:center;padding:20px">कुनै टिप्पणी छैन।</p>'; return; }
     el.innerHTML = list.map(c => `
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(200,144,10,.15);border-radius:10px;padding:14px 16px;margin-bottom:10px">
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(200,144,10,.13);border-radius:10px;padding:14px 16px;margin-bottom:10px">
         <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap">
           <div>
-            <div style="font-size:14px;color:rgba(255,255,255,.85);font-weight:600">${esc(c.name)} ${c.location?`<span style="font-size:11px;color:rgba(255,255,255,.4)">• ${esc(c.location)}</span>`:''}
+            <div style="font-size:14px;color:rgba(255,255,255,.82);font-weight:600">${esc(c.name)} ${c.location?`<span style="font-size:11px;color:rgba(255,255,255,.35)">• ${esc(c.location)}</span>`:''}
             </div>
-            <div style="font-size:11px;color:rgba(255,255,255,.35);margin:3px 0">${new Date(c.created_at).toLocaleDateString('ne-NP')} • ${c.posts?.title ? esc(c.posts.title) : '—'}</div>
-            <div style="font-size:13px;color:rgba(255,255,255,.65);margin-top:6px;line-height:1.6">${esc(c.text)}</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.32);margin:3px 0">${new Date(c.created_at).toLocaleDateString('ne-NP')} • ${c.posts?.title ? esc(c.posts.title) : '—'}</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.62);margin-top:6px;line-height:1.6">${esc(c.text)}</div>
           </div>
           <button class="btn btn-danger btn-sm" onclick="adminDeleteCommentFromPanel('${c.id}')">🗑</button>
         </div>
@@ -855,29 +984,33 @@ async function loadAdminComments() {
 
 async function adminDeleteCommentFromPanel(id) {
   if (!confirm('टिप्पणी हटाउने?')) return;
-  try {
-    await db.deleteComment(id);
-    loadAdminComments();
-    showToast('🗑 हटाइयो।');
-  } catch { showToast('❌ त्रुटि भयो।'); }
+  try { await db.deleteComment(id); loadAdminComments(); showToast('🗑 हटाइयो।'); }
+  catch { showToast('❌ त्रुटि भयो।'); }
 }
 
 async function savePost() {
   const title = document.getElementById('fTitle').value.trim();
-  const category = document.getElementById('fCategory').value;
+  const category = document.getElementById('fCategory').value.trim();
   const emoji = document.getElementById('fEmoji').value.trim() || '🔮';
   const excerpt = document.getElementById('fExcerpt').value.trim();
   const content = document.getElementById('fContent').value.trim();
   const editId = document.getElementById('editId').value;
 
-  if (!title || !category || !excerpt || !content) { showToast('❌ सबै फिल्ड भर्नुहोस्।'); return; }
+  // Only title is required now
+  if (!title) { showToast('❌ शीर्षक आवश्यक छ।'); return; }
 
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>सुरक्षित हुँदैछ...';
 
   try {
-    const data = { title, category, emoji, excerpt, content };
+    const data = {
+      title,
+      category: category || null,
+      emoji,
+      excerpt: excerpt || title.substring(0, 120),
+      content: content || null
+    };
     if (editId) {
       await db.updatePost(editId, data);
       showToast('✅ पोस्ट अपडेट भयो!');
@@ -892,7 +1025,6 @@ async function savePost() {
   }
   btn.disabled = false;
   btn.innerHTML = '💾 <span id="saveBtnLabel">प्रकाशित गर्नुहोस्</span>';
-  document.getElementById('saveBtnLabel').textContent = editId ? 'परिवर्तन सुरक्षित' : 'प्रकाशित गर्नुहोस्';
 }
 
 async function editPost(id) {
@@ -902,22 +1034,18 @@ async function editPost(id) {
   switchTab('new');
   document.getElementById('editId').value = id;
   document.getElementById('fTitle').value = p.title;
-  document.getElementById('fCategory').value = p.category;
+  document.getElementById('fCategory').value = p.category||'';
   document.getElementById('fEmoji').value = p.emoji||'';
-  document.getElementById('fExcerpt').value = p.excerpt;
-  document.getElementById('fContent').value = p.content;
+  document.getElementById('fExcerpt').value = p.excerpt||'';
+  document.getElementById('fContent').value = p.content||'';
   document.getElementById('formHeading').textContent = '✏️ पोस्ट सम्पादन';
-  document.getElementById('saveBtnLabel').textContent = 'परिवर्तन सुरक्षित गर्नुहोस्';
   document.querySelector('.admin-inner').scrollIntoView({behavior:'smooth'});
 }
 
 async function removePost(id) {
   if (!confirm('यो पोस्ट सधैंका लागि मेटाउने?')) return;
-  try {
-    await db.deletePost(id);
-    await loadAdminPosts();
-    showToast('🗑 पोस्ट मेटाइयो।');
-  } catch { showToast('❌ त्रुटि भयो।'); }
+  try { await db.deletePost(id); await loadAdminPosts(); showToast('🗑 पोस्ट मेटाइयो।'); }
+  catch { showToast('❌ त्रुटि भयो।'); }
 }
 
 function cancelEdit() {
@@ -927,8 +1055,9 @@ function cancelEdit() {
   document.getElementById('fEmoji').value = '';
   document.getElementById('fExcerpt').value = '';
   document.getElementById('fContent').value = '';
+  document.getElementById('mediaPreviewGrid').innerHTML = '';
   document.getElementById('formHeading').textContent = '✏️ नयाँ पोस्ट थप्नुहोस्';
-  document.getElementById('saveBtnLabel').textContent = 'प्रकाशित गर्नुहोस्';
+  uploadedMediaUrls = [];
 }
 
 function insertMd(before, after) {
@@ -947,8 +1076,7 @@ function insertMd(before, after) {
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
-  window.scrollTo(0,0);
-  closeNav();
+  window.scrollTo(0,0); closeNav();
 }
 function toggleNav() { document.getElementById('mobileNav').classList.toggle('open'); }
 function closeNav() { document.getElementById('mobileNav').classList.remove('open'); }
@@ -974,29 +1102,11 @@ function setDailyMsg() {
   if (el) el.textContent = dailyMsgs[new Date().getDay()];
 }
 
-function mdToHTML(md) {
-  if (!md) return '';
-  let h = md.replace(/\r\n/g,'\n')
-    .replace(/^## (.+)$/gm,'<h3>$1</h3>')
-    .replace(/^### (.+)$/gm,'<h4>$1</h4>')
-    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
-    .replace(/^> (.+)$/gm,'<blockquote>$1</blockquote>')
-    .replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:20px 0">')
-    .replace(/^- (.+)$/gm,'<li>$1</li>');
-  h = h.replace(/(<li>.*<\/li>\n?)+/g, m=>`<ul>${m}</ul>`);
-  const lines = h.split('\n\n');
-  return lines.map(l => {
-    l = l.trim(); if (!l) return '';
-    if (/^<(h[234]|ul|blockquote|hr)/.test(l)) return l;
-    return `<p>${l.replace(/\n/g,'<br>')}</p>`;
-  }).filter(Boolean).join('\n');
-}
-
 function getSamplePosts() {
   const now = new Date().toISOString();
   return [
-    { id:1, title:'जन्म कुण्डलीमा शनिको प्रभाव र उपाय', category:'कुण्डली ज्ञान', emoji:'🪐', excerpt:'शनि ग्रहको प्रभाव हाम्रो जीवनमा कति गहिरो छ? यसलाई कसरी बुझ्ने र उपाय गर्ने? विस्तृत जानकारी।', content:`## शनि ग्रह — न्यायका देवता\n\nवैदिक ज्योतिषमा शनिलाई **न्यायका देवता** मानिन्छ।\n\n> "शनिले हामीलाई दण्ड दिँदैन — हाम्रा नै कर्मको फल राख्छ।"\n\n## साढे साती र उपायहरू\n\n- शनिबार हनुमान मन्दिरमा जानुहोस्\n- काला तिल दान गर्नुहोस्\n- शनि चालीसा पाठ गर्नुहोस्`, created_at: now },
-    { id:2, title:'विवाह मिलानमा के के हेरिन्छ?', category:'विवाह मिलान', emoji:'💑', excerpt:'हिन्दू विवाहमा जन्मपत्री मिलान किन जरुरी छ? अष्टकूट मिलान, नाडी दोष र मांगलिक दोष — सबै विस्तारमा।', content:`## अष्टकूट मिलान\n\nअष्टकूटको जम्मा **३६ गुण** हुन्छन्। कम्तिमा १८ गुण मिल्नु आवश्यक छ।\n\n## नाडी दोष\n\n> "नाडी दोष विवाह मिलानमा सबैभन्दा महत्त्वपूर्ण मानिन्छ।"\n\n- वर्ण (१ गुण)\n- वश्य (२ गुण)\n- तारा (३ गुण)\n- नाडी (८ गुण)`, created_at: new Date(Date.now()-86400000).toISOString() },
+    { id:1, title:'जन्म कुण्डलीमा शनिको प्रभाव र उपाय', category:'कुण्डली ज्ञान', emoji:'🪐', excerpt:'शनि ग्रहको प्रभाव हाम्रो जीवनमा कति गहिरो छ? यसलाई कसरी बुझ्ने र उपाय गर्ने?', content:`## शनि ग्रह — न्यायका देवता\n\nवैदिक ज्योतिषमा शनिलाई **न्यायका देवता** मानिन्छ।\n\n> "शनिले हामीलाई दण्ड दिँदैन — हाम्रा नै कर्मको फल राख्छ।"\n\n## साढे साती र उपायहरू\n\n- शनिबार हनुमान मन्दिरमा जानुहोस्\n- काला तिल दान गर्नुहोस्\n- शनि चालीसा पाठ गर्नुहोस्`, created_at: now },
+    { id:2, title:'विवाह मिलानमा के के हेरिन्छ?', category:'विवाह मिलान', emoji:'💑', excerpt:'हिन्दू विवाहमा जन्मपत्री मिलान किन जरुरी छ? अष्टकूट मिलान, नाडी दोष र मांगलिक दोष।', content:`## अष्टकूट मिलान\n\nअष्टकूटको जम्मा **३६ गुण** हुन्छन्।\n\n> "नाडी दोष विवाह मिलानमा सबैभन्दा महत्त्वपूर्ण मानिन्छ।"\n\n- वर्ण (१ गुण)\n- वश्य (२ गुण)\n- तारा (३ गुण)\n- नाडी (८ गुण)`, created_at: new Date(Date.now()-86400000).toISOString() },
   ];
 }
 
